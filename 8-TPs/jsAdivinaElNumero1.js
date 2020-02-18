@@ -15,7 +15,12 @@ function comenzar()
 	//Genero el número RANDOM entre 1 y 100
 	 
 		//alert(numeroSecreto );
-	
+  var max;
+  var min;
+  min = 1
+  max = 100; 
+  
+    numeorSecreto= Math.floor(Math.Random()* (max - min) - min;
 
 }
 
