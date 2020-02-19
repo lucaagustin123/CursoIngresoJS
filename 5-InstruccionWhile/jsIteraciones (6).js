@@ -3,20 +3,22 @@ function mostrar()
 
 	var contador=0;
 	var acumulador=0;
+	var numero= NaN;
 
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/contador;
 
 while (contador < 5) {
-	var numero= NaN
-	
-if (isNaN(numero)) { 
-	numero = prompt( "ingrese un numero");
+	var numero = prompt( "ingrese un numero");
 	numero = parseInt(numero);
 
-} contador++;
+ while (isNaN(numero)) { 
+	numero = prompt( "error: ingresa un numero valido");
+	numero = parseInt(numero);
 
-acumulador+= numero;
+} contador ++;
+
+acumulador += numero;
 }
 
 
