@@ -10,6 +10,6 @@ while( sexo != "f" && sexo != "m"){
 }
 
 
-document.getElementById('Sexo').value=sexo;
+sexo = document.getElementById('Sexo').value=sexo;
 
 }//FIN DE LA FUNCIÓN

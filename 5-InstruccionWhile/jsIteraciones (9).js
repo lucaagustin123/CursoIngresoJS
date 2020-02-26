@@ -4,9 +4,11 @@ function mostrar()
 	var contador=0;
 	// declarar variables
 	var maximo;
-	var minimo;
-	var primeraVez = true;
 	
+	var minimo;
+
+	var primeraVez = true;
+
 	var respuesta= true;
 
 	while(respuesta)
@@ -25,7 +27,7 @@ function mostrar()
 			maximo = numero;
 			minimo = numero;
 		} else{
-			if (bumero > maximo){
+			if (numero > maximo){
 				maximo = numero;
 			}
 			if (numero < numero){
@@ -36,8 +38,9 @@ function mostrar()
 		respuesta= confirm("deseas continuar");
 
 	}
+	document.getElementById("maximo").value = maximo;
+	document.getElementById("minimo").value = minimo;
 
-
-
+    
 
 }//FIN DE LA FUNCIÓN
