@@ -1,0 +1,275 @@
+ejercicio 1)
+/*Debemos realizar la carga de 5(cinco) productos de prevención de contagio,
+de cada una debo obtener los siguientes datos:
+el tipo (validar "barbijo" , "jabón" o "alcohol") ,
+el precio (validar entre 100 y 300),
+la cantidad de unidades (no puede ser 0 o negativo y no debe superar las 1000 unidades),
+la Marca y el fabricante.
+Se debe Informar al usuario lo siguiente:
+a) Del más caro de los Barbijos, la cantidad de unidades y el fabricante
+b) Del ítem con más unidades, el fabricante
+c) Cuántas unidades de jabones hay en total
+ */
+
+{	var contadorDeCarga;
+	
+var producto;
+	
+var precio;
+	
+var cantidadDeUnidad;
+	
+var fabricante;
+	var tipo;
+	
+var barbijoMasCaro;
+
+	
+	
+contadorDeCarga = 0;
+	
+while(contadorDeCarga < 5)
+	
+do
+	
+
+{
+
+producto=prompt("ingrse un numero valido");
+
+}while(!isNaN(producto)  || (producto != "barbijo" && producto !="jabon" &&  producto != "alcohol"));
+
+do
+	
+{ 
+	
+precio=prompt("ingrse un numero valido");
+		
+precio=parseInt(precio)
+	
+}while(!isNaN(precio)  || (precio != "barbijo" && precio !="jabon" &&  precio != "alcohol"));
+
+
+do
+	
+{ 
+	
+cantidadDeUnidad=prompt("ingrse un numero valido");
+
+cantidadDeUnidad=parseInt(cantidadDeUnidad)
+	
+}while(!isNaN(cantidadDeUnidad)  && cantidadDeUnidad >1 &&  cantidadDeUnidad <1000);
+	
+// BanderaDeBarbijo = "no paso" 
+	
+BanderaDeBarbijo = "no paso"
+	
+if( tipo == "barbijo" && BanderaDeBarbijo != "no paso" || barbijoMasCaro < precio )
+
+{
+
+barbijoMasCaro = precio;
+		
+barbijoMasCaro = fabricante = fabricante;
+	
+barbijoMasCaro = cantidadDeUnidad = cantidadDeUnidad;
+
+
+BanderaDeBarbijo = "paso";
+	
+ }
+	
+
+}
+
+ejercicio 2)
+/*peso (entre 10 y 1000)en kilo,
+precio por kilo (más de cero ),
+
+tipo validad("v";"a";"m")(vegetal,animal o mezcla )
+
+Si compro más de 100 kilos en total tenes 15% de descuento sobre el total a pagar.
+
+Si compro más de 300 kilos en total tenes 25% de descuento sobre el total a pagar.
+
+a) El importe total a pagar , bruto sin descuento y...
+
+b) el importe total a pagar con descuento(solo si corresponde)
+
+d) Informar el tipo de alimento más caro.
+
+f) El promedio de precio por kilo en total.
+*/ 
+function mostrar()
+
+
+{ 
+  
+var respuesta;
+ 
+var producto;
+	
+var precio;
+  
+var contador;
+  
+var alimentoMasCaro;
+  
+var tipo
+  
+var 
+  
+
+
+  
+do
+	
+{
+		
+producto=prompt("ingrse un numero valido");
+
+}while(!isNaN(producto)  || (producto != "v" && producto !="a" &&  producto != "m"));
+	
+	
+do
+	
+{ 
+		
+precio=prompt("ingrse un numero valido");
+
+precio=parseInt(precio)
+  
+}while(!isNaN(precio)   && precio >300 &&  precio >100);
+  
+if(contador == 0 || alimentoMasCaro < precio )
+  
+{
+    
+alimentoMasCaro = precio
+    
+alimentoMasCarotipo = tipo
+  
+}
+  
+
+
+ 
+ respuesta= confirm("deseas continuar");
+
+}
+
+ejercicio 3)
+/* En el ingreso a un viaje en crucero nos solicitan nombre ,
+
+edad(mayores de 18),
+ 
+sexo("f" o "m") 
+ 
+estado civil("soltero", "casado" o "viudo")
+
+a) El nombre del hombre casado más joven.
+
+b) El sexo y nombre del pasajero/a más viejo.
+
+c) La cantidad de mujeres que hay casadas o viudas.
+
+d) El promedio de edad entre las mujeres.
+
+e) El promedio de edad entre los hombres solteros.
+*/
+function mostrar()
+
+{   
+var respuesta;
+	
+var nombre;
+	
+var sexo;
+	
+var edad;
+	
+var edadMinina;
+	
+var banderaPrimeraVezEdad;
+	
+var estadoCivil;
+	
+var contadorDeHombre;
+	
+var acumuladorDeEdadHombres;
+	
+var contadorDeMUjeres;
+	
+var acumuladorDeEdadMujeres;
+
+	
+do
+	
+{
+		
+sexo=prompt("ingrse un numero valido");
+	
+}while(!isNaN(sexo)  || sexo !="m" &&  sexo != "f");
+	
+if(sexo == "m")
+	
+{
+		
+contadorDeHombre++;
+		
+acumuladorDeEdadHombres += sexo
+	
+}
+	
+if(sexo == "m")
+	
+{
+		
+contadorDeMUjeres++;
+		
+acumuladorDeEdadMujeres += sexo
+	}
+	
+do
+	
+{ 
+		
+nombre=prompt("ingrse un nombre valido");
+	
+}while(isNaN(nombre));
+
+
+do
+	
+{
+		
+edad=prompt("ingrse un numero valido");
+		
+edad=parseInt(edad);
+	
+}while(!isNaN(edad) || edad > 18 );
+
+	
+do
+	
+{
+		
+estadoCivil=prompt("ingrse un numero valido");
+	
+}while(!isNaN(estadoCivil)  || (estadoCivil != "soltero" && estadoCivil !="casado" &&  estadoCivil != "viudo"));
+
+	
+banderaPrimeraVezEdad = "no paso";
+	
+if(nombre == "nombre" && banderaPrimeraVezEdad != "no paso" || edadMinina < edad )
+
+{
+		
+edadMinina = edad;
+		
+edadMinina = nombre;
+
+		
+banderaPrimeraVezEdad= "paso"		
+	
+}
