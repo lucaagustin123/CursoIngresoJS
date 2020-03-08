@@ -8,65 +8,89 @@ c) La cantidad de mujeres que hay casadas o viudas.
 d) El promedio de edad entre las mujeres.
 e) El promedio de edad entre los hombres solteros. */
 function mostrar()
-{   var respuesta;
+{   
+	var respuesta;
 	var nombre;
 	var sexo;
 	var edad;
 	var edadMinina;
 	var banderaPrimeraVezEdad;
 	var estadoCivil;
-	var contadorDeHombre;
+	var contadorDeHombres;
 	var acumuladorDeEdadHombres;
-	var contadorDeMUjeres;
+	var promedioEdadHombres;
+	var contadorDeMujeres;
 	var acumuladorDeEdadMujeres;
+	var promedioEdadMujeres;
+	
 
-	do
-	{
-		sexo=prompt("ingrse un numero valido");
-	}while(!isNaN(sexo)  || sexo !="m" &&  sexo != "f");
-	if(sexo == "m")
-	{
-		contadorDeHombre++;
-		acumuladorDeEdadHombres += sexo
-	}
-	if(sexo == "m")
-	{
-		contadorDeMUjeres++;
-		acumuladorDeEdadMujeres += sexo
-	}
+    respuesta = true;
+	contadorDeHombre = 0;
+	acumuladorDeEdadHombres = 0;
+	contadorDeMujeres = 0;
+	acumuladorDeEdadMujeres = 0;
+
 	do
 	{ 
-		nombre=prompt("ingrse un nombre valido");
-	}while(isNaN(nombre));
-
+		nombre=prompt("ingrese un nombre");
+		respuesta =confirm(nombre);
+	} while(!isNaN(nombre));
 	do
 	{
-		edad=prompt("ingrse un numero valido");
+		sexo=prompt("ingrese uno sexo f o m");
+		respuesta =confirm(sexo);
+
+	} while(!isNaN(sexo)  || sexo !="m" &&  sexo != "f");
+	
+	if(sexo == "m")
+	{
+		contadorDeHombre ++;
+		acumuladorDeEdadHombres += sexo;
+	}
+
+	if(sexo == "f")
+	{
+		contadorDeMujeres++;
+		acumuladorDeEdadMujeres += sexo;
+	}
+	do
+	{
+		edad=prompt("ingrese un edad");
 		edad=parseInt(edad);
-	}while(!isNaN(edad) || edad > 18 );
+		respuesta = confirm(edad);
+	}while(isNaN(edad) || edad < 18 );
+
+	
+	
 
 	do
 	{
-		estadoCivil=prompt("ingrse un numero valido");
-	}while(!isNaN(estadoCivil)  || (estadoCivil != "soltero" && estadoCivil !="casado" &&  estadoCivil != "viudo"));
+		estadoCivil=prompt("ingrese un estado Civil");
+		respuesta =confirm(estadoCivil);
 
+	}while(!isNaN(estadoCivil)  || (estadoCivil != "soltero" && estadoCivil !="casado" &&  estadoCivil != "viudo"));
+	
 	banderaPrimeraVezEdad = "no paso";
 	if(nombre == "nombre" && banderaPrimeraVezEdad != "no paso" || edadMinina < edad )
   	{
 		edadMinina = edad;
 		edadMinina = nombre;
 
-		banderaPrimeraVezEdad= "paso"		
-	}
-	 
-	
+		banderaPrimeraVezEdad = "paso";	
 		
+	}
+	
+	promedioEdadHombres = acumuladorDeEdadHombres / contadorDeHombres;
+	promedioEdadMujeres = acumuladorDeEdadMujeres / contadorDeMujeres;
+	
+	console.log(nombre);
+	console.log(edad);
+	console.log(sexo);
+	console.log(promedioEdadHombres);
+	console.log(promedioEdadMujeres);
+	
+
+	respuesta = confirm("deseas continuar");
 
 
-
-
-
-
-
-	respuesta=confirm("deseas continuar");
-}
+}// fin del la funcion
